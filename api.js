@@ -6,7 +6,7 @@ const unirest = require('unirest')
 const crypto  = require('crypto')
 const qs      = require('querystring')
 
-const ENDPOINT_API = 'https://www.mercadobitcoin.com.br/api/'
+const ENDPOINT_API = 'https://www.mercadobitcoin.net/api/'
 const ENDPOINT_TRADE_PATH = "/tapi/v3/"
 const ENDPOINT_TRADE_API = 'https://www.mercadobitcoin.net' + ENDPOINT_TRADE_PATH
 
@@ -63,6 +63,7 @@ MercadoBitcoinTrade.prototype = {
     },
 
     placeBuyOrder: function(qty, limit_price, success, error){
+        console.log(this.config.CURRENCY)
         this.call('place_buy_order', {coin_pair: `BRL${this.config.CURRENCY}`, quantity: (''+qty).substr(0,10), limit_price: ''+limit_price}, success, error)
     },
 

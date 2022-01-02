@@ -12,7 +12,6 @@
     "crypto": "^1.0.1",
     "dotenv-safe": "^4.0.4",
     "querystring": "^0.2.0",
-    "synchronize": "^2.0.0",
-    "unirest": "^0.5.1"
+    "unirest": "^0.6.0"
   }
 }
